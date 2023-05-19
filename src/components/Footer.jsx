@@ -15,7 +15,7 @@ function Footer() {
             <footer className="footer">
                 <div className="footer-headings">
                     <h3 className="footer-heading">clevezon</h3>
-                    <p className="heading-desc">The essence of clever fashion.</p>
+                    <p className="heading-desc">The zone of clever fashion sense.</p>
                 </div>
                 <div className="quick-links">
                     <h3 className="footer-heading">Quick Links</h3>

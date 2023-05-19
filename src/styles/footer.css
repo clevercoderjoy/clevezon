@@ -20,14 +20,25 @@ footer {
 .footer-headings h3 {
     margin: 0;
     font-size: 1.5rem;
+    transition: all 0.1s ease-in-out;
+}
+.footer-headings h3:hover {
+    font-size: 1.7rem;
 }
 .footer-headings p {
-    margin: 0.5rem;
+    margin: 0.7rem;
     font-size: 1rem;
 }
 .quick-links {
     text-align: center;
     margin: 2rem auto;
+}
+.quick-links h3 {
+    font-size: 1.5rem;
+    transition: all 0.1s ease-in-out;
+}
+.quick-links h3:hover {
+    font-size: 1.7rem;
 }
 .copyright {
     font-size: 1rem;
@@ -54,9 +65,10 @@ footer {
     width: 50px;
     margin: auto;
     border-radius: 50%;
-    transition: all 0.3s ease-in-out;
+    transition: all 0.1s ease-in-out;
 }
 .container a img:hover {
     height: 75px;
     width: 75px;
+    box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
 }
