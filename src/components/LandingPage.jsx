@@ -19,24 +19,6 @@ import clevercoderjoy from "../assets/images/clevercoderjoy.jpeg"
 function LandingPage() {
     return (
         <>
-            <header className="header">
-                <div className="logo">
-                    <h1>clevezon</h1>
-                </div>
-                <div className="search">
-                    <input type="text" placeholder="Search..." />
-                </div>
-                <div className="navigation">
-                    <nav>
-                        <ul>
-                            <li>Explore</li>
-                            <li>sign up/login</li>
-                            <li>wishlist</li>
-                            <li>cart</li>
-                        </ul>
-                    </nav>
-                </div>
-            </header>
             <section className="hero">
                 <img src={heroMobile} alt="50% OFF" className="hero-img" />
                 <img src={heroTablet} alt="50% OFF" className="hero-img" />
