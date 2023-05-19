@@ -5,9 +5,58 @@ html {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    background: #eef6f0;
+    background: #ebf3ed;
     color: #2b2839;
 }
 a {
     text-decoration: none;
+}
+footer {
+    margin: 1rem auto;
+}
+.footer-headings {
+    text-align: center;
+}
+.footer-headings h3 {
+    margin: 0;
+    font-size: 1.5rem;
+}
+.footer-headings p {
+    margin: 0.5rem;
+    font-size: 1rem;
+}
+.quick-links {
+    text-align: center;
+    margin: 2rem auto;
+}
+.copyright {
+    font-size: 1rem;
+    text-align: center;
+}
+.copyright img {
+    height: 25px;
+    width: 25px;
+    border-radius: 50%;
+    text-align: center;
+}
+.built {
+    text-align: center;
+    margin-top: 0;
+}
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.container a img {
+    height: 50px;
+    width: 50px;
+    margin: auto;
+    border-radius: 50%;
+    transition: all 0.3s ease-in-out;
+}
+.container a img:hover {
+    height: 75px;
+    width: 75px;
 }

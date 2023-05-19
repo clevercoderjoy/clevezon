@@ -1,31 +1,51 @@
 import React from 'react';
-import { Link } from "react-router-dom";
+import { NavLink, Link } from "react-router-dom";
 
+import footer from "../styles/footer.css";
+import iconSearch from "../assets/images/iconsSearch.gif";
+import iconWishList from "../assets/images/iconsWishList.gif";
+import iconCart from "../assets/images/iconsCart.gif";
+import iconLogin from "../assets/images/iconLogin.gif";
+import iconHome from "../assets/images/iconsHome.gif";
 import clevercoderjoy from "../assets/images/clevercoderjoy.jpeg";
 
 function Footer() {
     return (
         <>
             <footer className="footer">
-                <div className="socials">
-                    <a href="https://clevercoderjoy.bio.link/" target="_blank">
-                        <img src={clevercoderjoy} alt="" />
-                    </a>
-                </div>
                 <div className="footer-headings">
                     <h3 className="footer-heading">clevezon</h3>
-                    <p className="footer-desc">The essence of clever fashion.</p>
+                    <p className="heading-desc">The essence of clever fashion.</p>
                 </div>
                 <div className="quick-links">
-                    <ul>
-                        <li>Home</li>
-                        <li>Explore</li>
-                        <li>Cart</li>
-                        <li>Wishlist</li>
-                    </ul>
+                    <h3 className="footer-heading">Quick Links</h3>
+                    <nav>
+                        <nav>
+                            <NavLink to="/" title="Home">
+                                <img src={iconHome} alt="search-icon" />
+                            </NavLink>
+                            <NavLink to="/productListingPage" title="Go Shopping">
+                                <img src={iconSearch} alt="search-icon" />
+                            </NavLink>
+                            <NavLink to="/wishList" title="WishList">
+                                <img src={iconWishList} alt="wishList-icon" />
+                            </NavLink>
+                            <NavLink to="/cart" title="My Cart">
+                                <img src={iconCart} alt="icon-cart" />
+                            </NavLink>
+                            <NavLink to="/authPage" title="Sign-Up/Login">
+                                <img src={iconLogin} alt="icon-signUp/login" />
+                            </NavLink>
+                        </nav>
+                    </nav>
                 </div>
-                <p className="copyright">
-                    Copyright ©2023 All rights reserved | Built by <Link to="https://clevercoderjoy.bio.link" target="_blank">clevercoderjoy {"{...}"}</Link></p>
+                <p className="copyright">Copyright ©2023 All rights reserved</p>
+                <div className="container">
+                    <p className="built">Built by</p>
+                    <Link className="connect" to="https://clevercoderjoy.bio.link" target="_blank">
+                        <img src={clevercoderjoy} alt="clevercoderjoy" />
+                    </Link>
+                </div>
             </footer>
         </>
     )

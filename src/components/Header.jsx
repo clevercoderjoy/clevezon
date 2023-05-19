@@ -11,6 +11,7 @@ import iconSearch from "../assets/images/iconsSearch.gif";
 import iconWishList from "../assets/images/iconsWishList.gif";
 import iconCart from "../assets/images/iconsCart.gif";
 import iconLogin from "../assets/images/iconLogin.gif";
+import iconHome from "../assets/images/iconsHome.gif";
 
 function Header() {
     return (
@@ -24,6 +25,9 @@ function Header() {
                 </div>
                 <div className="navigation">
                     <nav>
+                        <NavLink to="/" title="Home">
+                            <img src={iconHome} alt="search-icon" />
+                        </NavLink>
                         <NavLink to="/productListingPage" title="Go Shopping">
                             <img src={iconSearch} alt="search-icon" />
                         </NavLink>
