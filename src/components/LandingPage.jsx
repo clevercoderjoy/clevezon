@@ -1,5 +1,6 @@
 import React from 'react';
 
+import landingPage from "../styles/landingPage.css";
 import heroMobile from "../assets/images/heroMobile.jpg";
 import heroTablet from "../assets/images/heroTablet.jpg";
 import heroDesktop from "../assets/images/heroDesktop.jpg";
