@@ -20,11 +20,11 @@ function Header() {
                     <NavLink to="/"><h1>clevezon</h1></NavLink>
                 </div>
                 <div className="search">
-                    <input type="text" placeholder="Search..." />
+                    <input type="text" placeholder="🔍Search..." />
                 </div>
                 <div className="navigation">
                     <nav>
-                        <NavLink to="/productListingPage" title="Explore products">
+                        <NavLink to="/productListingPage" title="Go Shopping">
                             <img src={iconSearch} alt="search-icon" />
                         </NavLink>
                         <NavLink to="/wishList" title="WishList">
