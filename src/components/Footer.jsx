@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from "react-router-dom";
 
 import clevercoderjoy from "../assets/images/clevercoderjoy.jpeg";
 
@@ -24,7 +25,7 @@ function Footer() {
                     </ul>
                 </div>
                 <p className="copyright">
-                    Copyright ©2023 All rights reserved | Built by clevercoderjoy "{"{...}"}"</p>
+                    Copyright ©2023 All rights reserved | Built by <Link to="https://clevercoderjoy.bio.link" target="_blank">clevercoderjoy {"{...}"}</Link></p>
             </footer>
         </>
     )

@@ -50,7 +50,7 @@ function LandingPage() {
                     <button className="category-btn">Shop for Women</button>
                 </div>
             </section>
-            
+
         </>
     )
 }
