@@ -44,17 +44,19 @@ function LandingPage() {
             </section>
             <section className="categories">
                 <h2 className="category-heading">Shop by Category</h2>
-                <div className="category">
-                    <img src={categoryMen} alt="category: men" className="men" />
-                    <button className="category-btn">Shop for Men</button>
-                </div>
-                <div className="category">
-                    <img src={categoryKids} alt="category: kids" className="kids" />
-                    <button className="category-btn">Shop for Kids</button>
-                </div>
-                <div className="category">
-                    <img src={categoryWomen} alt="category: women" className="women" />
-                    <button className="category-btn">Shop for Women</button>
+                <div className="category-container">
+                    <div className="category">
+                        <img src={categoryMen} alt="category: men" className="men" />
+                        <button className="category-btn">Shop for Men</button>
+                    </div>
+                    <div className="category">
+                        <img src={categoryWomen} alt="category: women" className="women" />
+                        <button className="category-btn">Shop for Women</button>
+                    </div>
+                    <div className="category">
+                        <img src={categoryKids} alt="category: kids" className="kids" />
+                        <button className="category-btn">Shop for Kids</button>
+                    </div>
                 </div>
             </section>
 
