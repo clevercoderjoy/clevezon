@@ -25,8 +25,12 @@ function LandingPage() {
                 <Link to="/productListingPage">
                     <img src={heroMobile} alt="50% OFF" className="hero-img mobile" />
                 </Link>
-                <img src={heroTablet} alt="50% OFF" className="hero-img tablet" />
-                <img src={heroDesktop} alt="50% OFF" className="hero-img desktop" />
+                <Link to="/productListingPage">
+                    <img src={heroTablet} alt="50% OFF" className="hero-img tablet" />
+                </Link>
+                <Link to="/productListingPage">
+                    <img src={heroDesktop} alt="50% OFF" className="hero-img desktop" />
+                </Link>
             </section>
             <section className="brands">
                 <h2 className="brands-heading">FEATURED BRANDS</h2>

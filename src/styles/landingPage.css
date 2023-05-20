@@ -17,7 +17,10 @@ a {
     transition: all 0.1s ease-in-out;
     border-radius: 10px;
 }
-.hero:hover {
+.hero img {
+    transition: all 0.1s ease-in-out;
+}
+.hero img:hover {
     box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
 }
 .mobile {
@@ -136,14 +139,8 @@ a {
     }
 }
 @media screen and (min-width: 960px) {
-    html {
-        background: green;
-    }
 }
 @media screen and (min-width: 1200px) {
-    html {
-        background: tomato;
-    }
     .mobile {
         display: none;
     }
@@ -153,6 +150,7 @@ a {
     .desktop {
         display: block;
         width: 90vw;
+        height: 90vh;
         margin: 1rem auto;
         border-radius: 10px;
     }
