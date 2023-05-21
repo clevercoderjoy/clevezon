@@ -6,50 +6,54 @@ import LandingPage from './LandingPage';
 import ProductListingPage from './ProductListingPage';
 import Cart from './Cart';
 import WishList from './WishList';
-import AuthPage from './AuthPage';
 import iconSearch from "../assets/images/iconsSearch.gif";
 import iconWishList from "../assets/images/iconsWishList.gif";
 import iconCart from "../assets/images/iconsCart.gif";
 import iconLogin from "../assets/images/iconLogin.gif";
 import iconHome from "../assets/images/iconsHome.gif";
+import SignUp from './SignUp';
+import Login from './Login';
 
 function Header() {
     return (
         <>
             <header className="header">
-                <div className="logo">
-                    <NavLink to="/"><h1>clevezon</h1></NavLink>
-                </div>
-                <div className="search">
-                    <input type="text" placeholder="🔍Search..." />
-                </div>
-                <div className="navigation">
-                    <nav>
-                        <NavLink to="/" title="Home">
-                            <img src={iconHome} alt="search-icon" />
-                        </NavLink>
-                        <NavLink to="/productListingPage" title="Go Shopping">
-                            <img src={iconSearch} alt="search-icon" />
-                        </NavLink>
-                        <NavLink to="/wishList" title="WishList">
-                            <img src={iconWishList} alt="wishList-icon" />
-                        </NavLink>
-                        <NavLink to="/cart" title="My Cart">
-                            <img src={iconCart} alt="icon-cart" />
-                        </NavLink>
-                        <NavLink to="/authPage" title="Sign-Up/Login">
-                            <img src={iconLogin} alt="icon-signUp/login" />
-                        </NavLink>
-                    </nav>
-                    <Routes>
-                        <Route path="/" element={<LandingPage />} />
-                        <Route path="/productListingPage" element={<ProductListingPage />} />
-                        <Route path="/cart" element={<Cart />} />
-                        <Route path="/wishList" element={<WishList />} />
-                        <Route path="/authPage" element={<AuthPage />} />
-                    </Routes>
+                <div className="header-container">
+                    <div className="logo">
+                        <NavLink to="/"><h1>clevezon</h1></NavLink>
+                    </div>
+                    <div className="search">
+                        <input type="text" placeholder="🔍Search..." />
+                    </div>
+                    <div className="navigation">
+                        <nav>
+                            <NavLink to="/" title="Home">
+                                <img src={iconHome} alt="search-icon" />
+                            </NavLink>
+                            <NavLink to="/productListingPage" title="Go Shopping">
+                                <img src={iconSearch} alt="search-icon" />
+                            </NavLink>
+                            <NavLink to="/wishList" title="WishList">
+                                <img src={iconWishList} alt="wishList-icon" />
+                            </NavLink>
+                            <NavLink to="/cart" title="My Cart">
+                                <img src={iconCart} alt="icon-cart" />
+                            </NavLink>
+                            <NavLink to="/signUp" title="Sign-Up/Login">
+                                <img src={iconLogin} alt="icon-signUp/login" />
+                            </NavLink>
+                        </nav>
+                    </div>
                 </div>
             </header>
+            <Routes>
+                <Route path="/" element={<LandingPage />} />
+                <Route path="/productListingPage" element={<ProductListingPage />} />
+                <Route path="/cart" element={<Cart />} />
+                <Route path="/wishList" element={<WishList />} />
+                <Route path="/signUp" element={<SignUp />} />
+                <Route path="/login" element={<Login />} />
+            </Routes>
         </>
     )
 }

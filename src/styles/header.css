@@ -1,13 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap");
 
-html {
-    font-family: "Montserrat", sans-serif;
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-    background: #eef6f0;
-    color: #2b2839;
-}
 a {
     text-decoration: none;
 }
@@ -54,4 +46,67 @@ nav a img {
 nav a img:hover {
     width: 50px;
     height: 50px;
+}
+@media screen and (min-width: 620px) {
+    .logo {
+        font-size: 2.5rem;
+    }
+    .logo:hover {
+        font-size: 2.7rem;
+    }
+    nav a {
+        margin: 2rem;
+        font-size: 1.75rem;
+    }
+}
+@media screen and (min-width: 960px) {
+    .logo {
+        text-align: center;
+        font-size: 2.5rem;
+        transition: all 0.1s ease-in-out;
+    }
+    .logo:hover {
+        font-size: 2.7rem;
+    }
+    .search input {
+        width: 75vw;
+        margin: auto;
+    }
+    nav a {
+        margin: 2.5rem;
+        font-size: 2rem;
+    }
+}
+@media screen and (min-width: 1200px) {
+    .header-container {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        margin-top: -3rem;
+    }
+    .logo {
+        text-align: center;
+        font-size: 3rem;
+        transition: all 0.1s ease-in-out;
+    }
+    .logo h1 {
+        margin-top: 45px;
+    }
+    .logo:hover {
+        font-size: 3.2rem;
+    }
+    nav {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: -1rem;
+    }
+    nav a {
+        margin: 0.7rem;
+        font-size: 3rem;
+    }
+    .search input {
+        width: 35vw;
+        margin: auto;
+    }
 }

@@ -1,12 +1,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap");
 
-html {
-    font-family: "Montserrat", sans-serif;
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-    background: #ebf3ed;
-    color: #2b2839;
+hr {
+    max-width: 75vw;
+    border: 1px solid #b5caf7;
 }
 a {
     text-decoration: none;
@@ -68,7 +64,115 @@ footer {
     transition: all 0.1s ease-in-out;
 }
 .container a img:hover {
-    height: 75px;
-    width: 75px;
+    height: 55px;
+    width: 55px;
     box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
+}
+@media screen and (min-width: 620px) {
+    .footer-headings h3 {
+        font-size: 1.75rem;
+    }
+    .footer-headings h3:hover {
+        font-size: 1.9rem;
+    }
+    .quick-links h3 {
+        font-size: 1.75rem;
+    }
+    .quick-links h3:hover {
+        font-size: 1.9rem;
+    }
+    .footer-headings p {
+        font-size: 1.2rem;
+    }
+}
+@media screen and (min-width: 960px) {
+    .footer-headings h3 {
+        font-size: 2.5rem;
+    }
+    .footer-headings h3:hover {
+        font-size: 2.7rem;
+    }
+    .quick-links h3 {
+        font-size: 2rem;
+    }
+    .quick-links h3:hover {
+        font-size: 2.2rem;
+    }
+    .footer-headings p {
+        font-size: 1.5rem;
+    }
+    .quick-links nav img {
+        margin: auto 2rem;
+    }
+    .copyright {
+        font-size: 1.2rem;
+    }
+    .built {
+        font-size: 1.2rem;
+    }
+    .container a img {
+        height: 60px;
+        width: 60px;
+    }
+    .container a img:hover {
+        height: 65px;
+        width: 65px;
+    }
+}
+@media screen and (min-width: 1200px) {
+    .footer-headings h3 {
+        font-size: 3rem;
+        margin-top: 2rem;
+    }
+    .footer-headings h3:hover {
+        font-size: 3.2rem;
+    }
+    .quick-links h3 {
+        font-size: 3rem;
+        margin-bottom: 0.7rem;
+    }
+    .quick-links h3:hover {
+        font-size: 3.2rem;
+    }
+    .quick-links a {
+        margin: 1rem -1rem;
+    }
+    .footer-headings p {
+        font-size: 1.5rem;
+        margin-bottom: 1rem;
+    }
+    .copyright {
+        font-size: 1.2rem;
+        margin: 5rem 3rem 0.5rem 0;
+    }
+    .built {
+        font-size: 1.2rem;
+        margin-bottom: 0.5rem;
+    }
+    .container a img {
+        height: 75px;
+        width: 75px;
+    }
+    .container a img:hover {
+        height: 80px;
+        width: 80px;
+    }
+    footer {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        margin-top: -1rem;
+    }
+    nav {
+        display: flex;
+    }
+    .copyright-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .container {
+        display: flex;
+    }
 }
