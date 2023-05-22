@@ -1,0 +1,168 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap");
+
+html {
+    font-family: "Montserrat", sans-serif;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    color: #2b2839;
+    overflow-x: hidden;
+}
+a {
+    text-decoration: none;
+}
+h1 {
+    font-size: 2rem;
+    text-align: center;
+    margin: 0.5rem auto 1.5rem auto;
+}
+h2 {
+    margin-bottom: 1rem;
+    text-align: center;
+}
+.signUp-container {
+    border: 5px solid #b5caf7;
+    border-radius: 10px;
+    padding: 1rem;
+    margin: 2rem auto;
+    text-align: center;
+    width: 250px;
+}
+form {
+    display: flex;
+    flex-direction: column;
+    margin: 0.5rem auto;
+}
+input {
+    margin: 0.5rem auto;
+    padding: 0.3rem 1rem;
+    border-radius: 10px;
+    border: 5px solid #b5caf7;
+    text-align: center;
+    font-size: 1rem;
+    color: #2b2839;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 500;
+    transition: all 0.3s ease-in-out;
+}
+input::placeholder {
+    font-size: 1rem;
+    text-align: left;
+}
+input:focus {
+    outline: none;
+    background: #ddebf8;
+}
+.btn {
+    margin: 1rem auto;
+    padding: 0.5rem 1rem;
+    font-weight: bold;
+    border: 5px solid #b5caf7;
+    background: transparent;
+    border-radius: 10px;
+    cursor: pointer;
+    text-align: center;
+    width: 50%;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: all 0.2s ease-in-out;
+}
+.btn:hover {
+    background: #b5caf7;
+    border: 5px solid white;
+    color: white;
+}
+.member-btn {
+    color: #2b2839;
+    text-transform: capitalize;
+}
+.member {
+    font-size: 1rem;
+    margin-top: -0.5rem;
+    margin-bottom: 1.7rem;
+}
+.error {
+    margin: 2rem auto;
+    color: tomato;
+    font-weight: bold;
+    font-size: 1rem;
+    margin-bottom: 1rem;
+}
+@media screen and (min-width: 620px) {
+    h2 {
+        margin-top: 1rem;
+        margin-bottom: 2rem;
+    }
+    .signUp-container {
+        width: 500px;
+    }
+    .form-name input {
+        margin: 0 0.5rem;
+    }
+    .form-credentials input {
+        margin: 1rem 0.5rem;
+    }
+    .submit-btn {
+        margin: 0.5rem auto;
+    }
+    .member-container {
+        margin: 1.5rem;
+    }
+    .member {
+        margin: auto;
+        display: inline;
+        font-weight: bold;
+    }
+    .member-btn {
+        width: 150px;
+        border: 3px solid #b5caf7;
+        margin: 0.5rem 1rem;
+    }
+    .member-btn:hover {
+        border: 3px solid white;
+    }
+}
+@media screen and (min-width: 960px) {
+    h2 {
+        margin-bottom: 2.5rem;
+    }
+    .signUp-container {
+        width: 700px;
+    }
+    .form-name input {
+        margin: 0 3rem;
+    }
+    .form-credentials input {
+        margin: 1rem 3rem;
+    }
+    .submit-btn {
+        margin: 1rem auto;
+    }
+    .member-container {
+        margin: 1rem;
+    }
+    .member {
+        margin: auto;
+        display: inline;
+        font-weight: bold;
+    }
+    .member-btn {
+        width: 150px;
+        border: 5px solid #b5caf7;
+        margin: 0.5rem 1rem;
+    }
+    .member-btn:hover {
+        border: 5px solid white;
+    }
+    .error {
+        margin: 2.5rem auto;
+        margin-bottom: 2rem;
+    }
+}
+@media screen and (min-width: 1200px) {
+    .signUp-container {
+        margin: 3rem auto;
+        text-align: center;
+        width: 900px;
+    }
+}

@@ -1,0 +1,70 @@
+html {
+    font-family: "Montserrat", sans-serif;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    color: #2b2839;
+    overflow-x: hidden;
+}
+a {
+    text-decoration: none;
+}
+.form-login-container {
+    border: 5px solid #b5caf7;
+    border-radius: 10px;
+    padding: 1rem;
+    margin: 2rem auto;
+    text-align: center;
+    width: 250px;
+}
+.login-question {
+    margin-top: -0.5rem;
+    margin-bottom: 1.7rem;
+}
+.form-login-container .error {
+    margin-bottom: 0.5rem;
+}
+
+@media screen and (min-width: 620px) {
+    .form-login-container {
+        width: 450px;
+    }
+    .form-login-container h2 {
+        margin: 1rem;
+    }
+    .login-question {
+        margin-top: 0.5rem;
+        margin-bottom: 1.7rem;
+    }
+}
+@media screen and (min-width: 960px) {
+    .form-login-container input {
+        margin: 1rem;
+    }
+    .login-question {
+        margin-bottom: 1.5rem;
+    }
+    .form-login-container .error {
+        margin: 2rem auto 1rem auto;
+    }
+}
+@media screen and (min-width: 1200px) {
+    .form-login-container {
+        width: 700px;
+        display: flex;
+        flex-direction: column;
+    }
+    .form-login-container .login-credentials {
+        display: flex;
+        flex-direction: column;
+    }
+    .form-login-container h2 {
+        margin-bottom: 0.5rem;
+    }
+    .form-login-container .login-btn {
+        margin: 0.5rem auto;
+    }
+    .form-login-container .login-question {
+        margin: 0 auto 1.7rem auto;
+    }
+}

@@ -22,6 +22,7 @@ function LandingPage() {
     return (
         <>
             <section className="hero">
+                <h1>Featured Offer</h1>
                 <Link to="/productListingPage">
                     <img src={heroMobile} alt="50% OFF" className="hero-img mobile" />
                 </Link>

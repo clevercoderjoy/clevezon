@@ -45,6 +45,7 @@ function Header() {
                         </nav>
                     </div>
                 </div>
+            <hr />
             </header>
             <Routes>
                 <Route path="/" element={<LandingPage />} />

@@ -40,7 +40,7 @@ function Footer() {
                 </div>
                 <div className="copyright-container">
                     <p className="copyright">Copyright ©2023 All rights reserved</p>
-                    <div className="container">
+                    <div className="built-container">
                         <p className="built">Built by</p>
                         <Link className="connect" to="https://clevercoderjoy.bio.link" target="_blank">
                             <img src={clevercoderjoy} alt="clevercoderjoy" />

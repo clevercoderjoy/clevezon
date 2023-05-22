@@ -50,20 +50,20 @@ footer {
     text-align: center;
     margin-top: 0;
 }
-.container {
+.built-container {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 }
-.container a img {
+.built-container a img {
     height: 50px;
     width: 50px;
     margin: auto;
     border-radius: 50%;
     transition: all 0.1s ease-in-out;
 }
-.container a img:hover {
+.built-container a img:hover {
     height: 55px;
     width: 55px;
     box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
@@ -110,11 +110,11 @@ footer {
     .built {
         font-size: 1.2rem;
     }
-    .container a img {
+    .built-container a img {
         height: 60px;
         width: 60px;
     }
-    .container a img:hover {
+    .built-container a img:hover {
         height: 65px;
         width: 65px;
     }
@@ -149,11 +149,11 @@ footer {
         font-size: 1.2rem;
         margin-bottom: 0.5rem;
     }
-    .container a img {
+    .built-container a img {
         height: 75px;
         width: 75px;
     }
-    .container a img:hover {
+    .built-container a img:hover {
         height: 80px;
         width: 80px;
     }
@@ -172,7 +172,7 @@ footer {
         justify-content: center;
         align-items: center;
     }
-    .container {
+    .built-container {
         display: flex;
     }
 }
