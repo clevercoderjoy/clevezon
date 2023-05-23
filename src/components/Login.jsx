@@ -18,6 +18,8 @@ function Login() {
                 </form>
                 <div className="login-container">
                     <p className="login-question">Don't have an account?</p>
+                    <button className="btn guest-login">Guest Login</button>
+                    <p className="or">OR</p>
                     <Link to="/signUp" className="btn joinUs-btn">Join Us</Link>
                 </div>
                 <div className="error">Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis, ex.</div>

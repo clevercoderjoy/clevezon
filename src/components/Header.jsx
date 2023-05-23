@@ -39,7 +39,7 @@ function Header() {
                             <NavLink to="/cart" title="My Cart">
                                 <img src={iconCart} alt="icon-cart" />
                             </NavLink>
-                            <NavLink to="/signUp" title="Sign-Up/Login">
+                            <NavLink to="/login" title="Sign-Up/Login">
                                 <img src={iconLogin} alt="icon-signUp/login" />
                             </NavLink>
                         </nav>
