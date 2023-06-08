@@ -36,9 +36,11 @@ function Header() {
                             </NavLink>
                             <NavLink to="/wishList" title="WishList">
                                 <img src={iconWishList} alt="wishList-icon" />
+                                <span className="wishList-count">1</span>
                             </NavLink>
                             <NavLink to="/cart" title="My Cart">
                                 <img src={iconCart} alt="icon-cart" />
+                                <span className="cart-count">1</span>
                             </NavLink>
                             <NavLink to="/login" title="Sign-Up/Login">
                                 <img src={iconLogin} alt="icon-signUp/login" />
