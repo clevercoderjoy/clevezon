@@ -17,6 +17,7 @@ function SignUp() {
                     <div className="form-credentials">
                         <input required type="email" id="email" placeholder="Email" />
                         <input required type="password" id="password" placeholder="Password" />
+                        <input required type="password" id="confirm-password" placeholder="Confirm Password" />
                     </div>
                     <button type="submit" className="btn submit-btn">Submit</button>
                 </form>

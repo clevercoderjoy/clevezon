@@ -13,6 +13,7 @@ import iconLogin from "../assets/images/iconLogin.gif";
 import iconHome from "../assets/images/iconsHome.gif";
 import SignUp from './SignUp';
 import Login from './Login';
+import ProductCard from './ProductCard';
 
 function Header() {
     return (
@@ -45,7 +46,7 @@ function Header() {
                         </nav>
                     </div>
                 </div>
-            <hr />
+                <hr />
             </header>
             <Routes>
                 <Route path="/" element={<LandingPage />} />
@@ -54,6 +55,7 @@ function Header() {
                 <Route path="/wishList" element={<WishList />} />
                 <Route path="/signUp" element={<SignUp />} />
                 <Route path="/login" element={<Login />} />
+                <Route path="/productCard/:productId" element={<ProductCard />} />
             </Routes>
         </>
     )

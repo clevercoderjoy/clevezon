@@ -9,12 +9,12 @@ header hr {
 .header-container {
     margin-top: 2rem;
 }
-.logo {
+.logo h1{
     text-align: center;
     font-size: 2rem;
     transition: all 0.1s ease-in-out;
 }
-.logo:hover {
+.logo h1:hover {
     font-size: 2.2rem;
 }
 .logo a {
@@ -54,10 +54,10 @@ nav a img:hover {
     height: 50px;
 }
 @media screen and (min-width: 620px) {
-    .logo {
+    .logo h1 {
         font-size: 2.5rem;
     }
-    .logo:hover {
+    .logo h1:hover {
         font-size: 2.7rem;
     }
     nav a {
@@ -67,15 +67,15 @@ nav a img:hover {
 }
 @media screen and (min-width: 960px) {
     .header-container {
-        margin-top: 2rem;
+        margin-top: 1.3rem;
     }
-    .logo {
+    .logo h1{
         text-align: center;
-        font-size: 2.5rem;
+        font-size: 2.7rem;
         transition: all 0.1s ease-in-out;
     }
-    .logo:hover {
-        font-size: 2.7rem;
+    .logo h1:hover {
+        font-size: 2.9rem;
     }
     .search input {
         width: 75vw;
@@ -94,7 +94,7 @@ nav a img:hover {
         display: flex;
         justify-content: space-around;
         align-items: center;
-        margin-top: 2rem;
+        margin-top: 2.5rem;
     }
     .logo {
         text-align: center;
@@ -103,8 +103,9 @@ nav a img:hover {
     }
     .logo h1 {
         display: inline-block;
+        font-size: 3rem;
     }
-    .logo:hover {
+    .logo h1:hover {
         font-size: 3.2rem;
     }
     nav {
