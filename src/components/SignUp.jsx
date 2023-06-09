@@ -11,13 +11,13 @@ function SignUp() {
                 <h2>Join Us!</h2>
                 <form action="">
                     <div className="form-name">
-                        <input required type="text" id="firstName" placeholder="First Name" />
-                        <input required type="text" id="lastName" placeholder="Last Name" />
+                        <input required type="text" id="firstName" placeholder="First Name" autoComplete="on" />
+                        <input required type="text" id="lastName" placeholder="Last Name" autoComplete="on" />
                     </div>
                     <div className="form-credentials">
-                        <input required type="email" id="email" placeholder="Email" />
-                        <input required type="password" id="password" placeholder="Password" />
-                        <input required type="password" id="confirm-password" placeholder="Confirm Password" />
+                        <input required type="email" id="email" placeholder="Email" autoComplete="on" />
+                        <input required type="password" id="password" autoComplete="on" placeholder="Password" />
+                        <input required type="password" id="confirm-password" autoComplete="on" placeholder="Confirm Password" />
                     </div>
                     <button type="submit" className="btn submit-btn">Submit</button>
                 </form>

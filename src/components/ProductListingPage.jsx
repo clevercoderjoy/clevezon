@@ -12,7 +12,6 @@ function ProductListingPage() {
     const [inStock, setInStock] = useState(true);
     const handleFilterSideBar = () => {
         setSideBar(sideBar => !sideBar);
-        console.log(sideBar);
     }
     const sideBarStyle = {
         transform: sideBar ? "translateX(-280px)" : "",

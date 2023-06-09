@@ -11,8 +11,8 @@ function Login() {
                 <h2>Welcome Back</h2>
                 <form action="">
                     <div className="login-credentials">
-                        <input required type="email" id="email" placeholder="Email" />
-                        <input required type="password" id="password" placeholder="Password" />
+                        <input required type="email" id="email" placeholder="Email" autoComplete="on" />
+                        <input required type="password" id="password" placeholder="Password" autoComplete="on" />
                     </div>
                     <button type="submit" className="btn login-btn">Login</button>
                 </form>
