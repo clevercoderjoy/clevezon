@@ -154,6 +154,26 @@
     border: 5px solid white;
     color: white;
 }
+.loader {
+    border-top: 16px solid #4285f4;
+    border-right: 16px solid #0f9d58;
+    border-bottom: 16px solid #db4437;
+    border-left: 16px solid #f4b400;
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    animation: spin 1.5s linear infinite;
+    margin: auto;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
 @media screen and (min-width: 620px) {
     .filters-container {
         width: 45vw;

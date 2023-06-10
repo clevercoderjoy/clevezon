@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useContext, useState } from 'react';
 
 import productListingPage from "../styles/productListingPage.css";
 import { products } from "../backend/db/products";
@@ -6,8 +6,11 @@ import iconArrow from "../assets/images/iconArrow.png";
 import iconHeart from "../assets/images/iconsHeart.png";
 import FavoriteIcon from '@mui/icons-material/Favorite';
 import { Link } from 'react-router-dom';
+import { ProductContext } from '../contexts/DataContext';
 
 function ProductListingPage() {
+    const { allProducts, loading } = useContext(ProductContext);
+
     const [sideBar, setSideBar] = useState(true);
     const [inStock, setInStock] = useState(true);
     const handleFilterSideBar = () => {
@@ -117,41 +120,42 @@ function ProductListingPage() {
                     <div className="all-products-container">
                         <ul>
                             {
-                                products.map((product, index) => {
-                                    const { image, _id, in_stock, original_price, price, size, rating, title } = product;
-                                    return (<li key={index} className="cart-product-card">
-                                        <img src={image} alt={title} className="product-image" />
-                                        <div className="specs-container">
-                                            <div className="product-title-container">
-                                                <span className="product-title">{title}</span>
-                                            </div>
-                                            <div className="product-price-section">
-                                                <div className="product-price">
-                                                    <span className="product-currPrice">₹{price}</span>
-                                                    <span className="product-mrp">₹{original_price}</span>
+                                loading ? (<div className="loader"></div>) :
+                                    (allProducts.map((product, index) => {
+                                        const { image, _id, in_stock, original_price, price, size, rating, title } = product;
+                                        return (<li key={index} className="cart-product-card">
+                                            <img src={image} alt={title} className="product-image" />
+                                            <div className="specs-container">
+                                                <div className="product-title-container">
+                                                    <span className="product-title">{title}</span>
                                                 </div>
-                                                <span className="product-off">33% OFF</span>
+                                                <div className="product-price-section">
+                                                    <div className="product-price">
+                                                        <span className="product-currPrice">₹{price}</span>
+                                                        <span className="product-mrp">₹{original_price}</span>
+                                                    </div>
+                                                    <span className="product-off">33% OFF</span>
+                                                </div>
+                                                <div className="cart-btn">
+                                                    <span className="quantity-caption">Quantity:</span>
+                                                    <button className="btn-decrement">-</button>
+                                                    <span className="product-quantity">5</span>
+                                                    <button className="btn-increment">+</button>
+                                                </div>
+                                                <div className="heartSizeRating">
+                                                    <span className="heart">
+                                                        <FavoriteIcon className="icon-heart" />
+                                                    </span>
+                                                    <span className="rating">⭐{rating}</span>
+                                                    <span className="size">{size}</span>
+                                                </div>
+                                                <div className="btn-container">
+                                                    {in_stock ? <button className="btn-remove-wishList">Add To Cart</button> : <button disabled className="btn-remove-wishList">Out Of Stock</button>}
+                                                    <Link to={`/productCard/${_id}`} className="btn-show-description">Show Description</Link>
+                                                </div>
                                             </div>
-                                            <div className="cart-btn">
-                                                <span className="quantity-caption">Quantity:</span>
-                                                <button className="btn-decrement">-</button>
-                                                <span className="product-quantity">5</span>
-                                                <button className="btn-increment">+</button>
-                                            </div>
-                                            <div className="heartSizeRating">
-                                                <span className="heart">
-                                                    <FavoriteIcon className="icon-heart" />
-                                                </span>
-                                                <span className="rating">⭐{rating}</span>
-                                                <span className="size">{size}</span>
-                                            </div>
-                                            <div className="btn-container">
-                                                {in_stock ? <button className="btn-remove-wishList">Add To Cart</button> : <button disabled className="btn-remove-wishList">Out Of Stock</button>}
-                                                <Link to={`/productCard/${_id}`} className="btn-show-description">Show Description</Link>
-                                            </div>
-                                        </div>
-                                    </li>)
-                                })
+                                        </li>)
+                                    }))
                             }
                         </ul>
                     </div>
