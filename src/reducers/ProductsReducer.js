@@ -6,6 +6,12 @@ export const productReducer = (state, action) => {
                 allProducts: action.payload,
             };
         }
+        case "setIterable": {
+            return {
+                ...state,
+                currIterable: action.payload,
+            };
+        }
         case "loading": {
             return {
                 ...state,

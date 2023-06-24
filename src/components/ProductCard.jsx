@@ -9,7 +9,6 @@ import FavoriteIcon from '@mui/icons-material/Favorite';
 function ProductCard() {
     const { productId } = useParams();
     const product = products.filter((item) => item._id === productId);
-    console.log(product[0]);
 
     return (
         <>

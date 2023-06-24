@@ -11,6 +11,7 @@ export const ProductContextProvider = ({ children }) => {
         error: "error",
         allProducts: [],
         allCategories: [],
+        filteredProducts: [],
     };
     const [state, productsDispatch] = useReducer(productReducer, initialState);
 
@@ -27,7 +28,7 @@ export const ProductContextProvider = ({ children }) => {
                 });
             }
         } catch (e) {
-            console.log(e);
+            console.error(e);
         } finally {
             productsDispatch({
                 type: "loading",
@@ -35,29 +36,15 @@ export const ProductContextProvider = ({ children }) => {
             });
         }
     };
-    const getCategory = async () => {
-        try {
-            const { status, data } = await axios({
-                method: "get",
-                url: "/api/categories",
-            });
-            if (status === 200) {
-                productsDispatch({
-                    type: "category",
-                    payload: data?.categories,
-                });
-            }
-        } catch (e) {
-            console.log(e);
-        }
-    };
     useEffect(() => {
         getData();
-        getCategory();
     }, []);
     return (
         <ProductContext.Provider
-            value={{ allProducts: state.allProducts, loading: state.loading }}
+            value={{
+                state,
+                productsDispatch,
+            }}
         >
             {children}
         </ProductContext.Provider>

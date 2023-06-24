@@ -7,12 +7,17 @@ import iconHeart from "../assets/images/iconsHeart.png";
 import FavoriteIcon from '@mui/icons-material/Favorite';
 import { Link } from 'react-router-dom';
 import { ProductContext } from '../contexts/DataContext';
+import { FilterContext } from '../contexts/FilterContext';
 
 function ProductListingPage() {
-    const { allProducts, loading } = useContext(ProductContext);
+    const { state: { loading, allProducts }, productDispatch } = useContext(ProductContext);
+    const { filterState: { filteredProducts }, filterDispatch, handleFilters } = useContext(FilterContext);
+
+    const currIterableProducts = (filteredProducts.length === 0) ? allProducts : filteredProducts;
 
     const [sideBar, setSideBar] = useState(true);
     const [inStock, setInStock] = useState(true);
+
     const handleFilterSideBar = () => {
         setSideBar(sideBar => !sideBar);
     }
@@ -45,7 +50,7 @@ function ProductListingPage() {
                             <div className="filter-inputs">
                                 <div className="range-input">
                                     <label htmlFor="price">Price</label>
-                                    <input type="range" id="price" />
+                                    <input type="range" min="0" max="10000" id="price" onChange={(e) => handleFilters(e)} />
                                 </div>
                                 <div className="category-input">
                                     <h3>Categories</h3>
@@ -111,7 +116,7 @@ function ProductListingPage() {
                     </div>
                     <div className="filters">
                         <div className="filter-arrow">
-                            <img src={iconArrow} alt="arrow" className="arrow-icon" onClick={handleFilterSideBar} style={arrowImgStyle} />
+                            <img src={iconArrow} alt="arrow" className="arrow-icon" onClick={() => handleFilterSideBar()} style={arrowImgStyle} />
                         </div>
                     </div>
                 </aside>
@@ -121,7 +126,7 @@ function ProductListingPage() {
                         <ul>
                             {
                                 loading ? (<div className="loader"></div>) :
-                                    (allProducts.map((product, index) => {
+                                    (currIterableProducts?.map((product, index) => {
                                         const { image, _id, in_stock, original_price, price, size, rating, title } = product;
                                         return (<li key={index} className="cart-product-card">
                                             <img src={image} alt={title} className="product-image" />
@@ -132,7 +137,7 @@ function ProductListingPage() {
                                                 <div className="product-price-section">
                                                     <div className="product-price">
                                                         <span className="product-currPrice">₹{price}</span>
-                                                        <span className="product-mrp">₹{original_price}</span>
+                                                        <span className="product-mrp">₹ {original_price}</span>
                                                     </div>
                                                     <span className="product-off">33% OFF</span>
                                                 </div>
